@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -127,6 +128,11 @@ public class BannerSlider extends FrameLayout implements ViewPager.OnPageChangeL
 
                     viewPager = new CustomViewPager(getContext(),mustMakeViewPagerWrapContent);
                     viewPager.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                    int padding = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24.0f, getResources().getDisplayMetrics());
+                    int pageMargin = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6.0f, getResources().getDisplayMetrics());
+                    viewPager.setPadding(padding, 0, padding, 0);
+                    viewPager.setClipToPadding(false);
+                    viewPager.setPageMargin(pageMargin);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                         viewPager.setId(View.generateViewId());
