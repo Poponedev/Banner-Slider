@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.ImageView;
 
+import com.joooonho.SelectableRoundedImageView;
+
 /**
  * Created by nuuneoi on 2/17/15 AD.
  */
-public class AdjustableImageView extends ImageView {
+public class AdjustableImageView extends SelectableRoundedImageView {
 
     boolean mAdjustViewBounds;
 

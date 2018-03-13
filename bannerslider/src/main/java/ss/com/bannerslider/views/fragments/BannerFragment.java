@@ -42,6 +42,7 @@ public class BannerFragment extends Fragment {
         if (banner != null) {
 
             final AdjustableImageView imageView = new AdjustableImageView(getContext());
+            imageView.setCornerRadiiDP(5, 5, 5, 5);
             imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             imageView.setAdjustViewBounds(true);
             imageView.setScaleType(banner.getScaleType());
